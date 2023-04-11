@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الموردين</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/framework.css" />
+    <link rel="stylesheet" href="./css/master.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
+
+
+    <link rel="icon" type="image/x-icon" href="./imgs/logo.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment-precise-range-plugin@1.3.0/moment-precise-range.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+    <style>
+
+
+      @font-face {
+        font-family: myFirstFont;
+        src: url(./Fonts/Ethnocentric.ttf);
+      }
+
+      
+      /* Table Styles */
+
+      .table-wrapper{
+          box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+      }
+
+      .fl-table {
+          border-radius: 5px;
+          font-size: 17px;
+          font-weight: normal;
+          border: none;
+          border-collapse: collapse;
+          width: 100%;
+          max-width: 100%;
+          white-space: nowrap;
+          background-color: white;
+      }
+
+      .fl-table td{
+          text-align: center;
+          padding: 3px;
+          border: 2px solid #0a1951;
+      }
+
+
+      .fl-table th {
+          text-align: center;
+          padding: 8px;
+          border: 2px solid #0a1951;
+      }
+
+
+      .fl-table td {
+          border-right: 1px solid #f8f8f8;
+          font-size: 14px;
+          font-family: 'Cairo';
+      }
+
+
+      .fl-table thead th {
+          color: #ffffff;
+          background: #0a1951;
+      }
+
+      .fl-table tr {
+        border: 1px solid rgb(0, 0, 0);
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="page d-flex">
+      
+      <div class="content w-full">
+        
+        <!-- Start Head -->
+        <div class="head bg-white between-flex" style="padding: 0px 10px 15px; background: #f1f5f9;">
+          <div class="p-relative">
+            <h1 class="p-relative" style="text-align: center;">الطلاب</h1>
+          </div>
+        </div>
+        <!-- End Head -->
+
+        <div style="display: flex;align-items: center;justify-content: space-between;">
+          <div></div>
+          <button style="font-size: 18px; font-family:cairo; cursor:pointer; width: 120px; margin: 20px; border-radius: 10px; background: #0a1951; color: white; padding: 5px 0px; font-weight: 600;">اضافة طالب</button>
+        </div>
+
+        <div style="overflow: auto;">
+
+          <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <th>التعديل</th>
+                    <th>passwoard</th>
+                    <th>username</th>
+                    <th>المدينة</th>
+                    <th>رقم الجوال</th>
+                    <th>اسم الطالب</th>
+                    <th>كود الطالب</th>
+                    <th>#</th>
+                </tr>
+                </thead>
+
+                <tbody id="AllStudent">
+                  <tr data-id="" style="font-weight: 600;">
+                    <td class="Supplier-Editing">
+                      
+                      <a>
+                        <i title="حذف" class="fa-solid fa-trash removeStudent" data-id="" style="font-size: 20px; color: white; background: darkred; border-radius: 50%; padding: 6px 8px; cursor: pointer;"></i>
+                      </a>
+  
+                      <a>
+                        <i title="تعديل" class="fa-solid fa-pen-to-square editStudent" data-id="" style="font-size: 20px; color: #e0dfdf; background: #233245; border-radius: 50%; padding: 5px 5px; cursor: pointer;"></i>
+                      </a>
+  
+                      <a href="" target="_blank">
+                        <i title="واتساب" class="fa-brands fa-whatsapp" style="font-size: 20px; color: white; background: green; border-radius: 50%; padding: 4px 5px; cursor: pointer;"></i>
+                      </a>
+                      
+                    </td>
+                    <td class="StudentPassword">0123456</td>
+                    <td class="StudentUsername">ahmed324</td>
+                    <td class="StudentCity">القاهرة</td>
+                    <td class="StudentPhone">0155555555</td>
+                    <td class="StudentName">احمد الحلواني</td>
+                    <td class="StudentNumber">565465</td>
+                    <td class="StudentId">0</td>
+                  </tr>
+                <tbody>
+            </table>
+        </div>
+          
+        </div>
+
+      </div>
+
+
+      <!-- Start Sidebar can copy it to anthor file -->
+      <div class="sidebar bg-white p-20 p-relative">
+        <div>
+          <i class="fa-regular fa-circle-user fa-fw" style="font-weight: bold;font-size: 50px;width: 100%;"></i>
+          <h2>Hello <span id="AdminName" style="color: #397eaf"></span></h2>
+        </div>
+        <ul>
+          
+          <li>
+
+            <a class="Orders-Accepted active d-flex align-center fs-14 c-black rad-6 p-10" style="display: flex; justify-content: end; cursor: pointer;" href="./Dashboard-Categoies.html">
+              <span style="font-weight: bold; font-size:20px;">الاقسام</span>
+              <i class="fa-regular fa-section" style="font-weight: bold; font-size:20px; margin-left: 10px; color: #397eaf;"></i>
+            </a>
+
+            <a class="Orders-Accepted active d-flex align-center fs-14 c-black rad-6 p-10" style="display: flex; justify-content: end; cursor: pointer;" href="./Dashboard-Books.html">
+              <span style="font-weight: bold; font-size:20px;">الكتب</span>
+              <i class="fa-regular fa-book" style="font-weight: bold; font-size:20px; margin-left: 10px; color: #397eaf;"></i>
+            </a>
+
+            <a class="Orders-Accepted active d-flex align-center fs-14 c-black rad-6 p-10" style="display: flex; justify-content: end; cursor: pointer;" href="Dashboard-Students.html">
+              <span style="font-weight: bold; font-size:20px;">الطلاب</span>
+              <i class="fa-regular fa-user" style="font-weight: bold; font-size:20px; margin-left: 10px; color: #397eaf;"></i>
+            </a>
+
+            <a class="Orders-Accepted active d-flex align-center fs-14 c-black rad-6 p-10" style="display: flex; justify-content: end; cursor: pointer; background: rgba(137, 8, 8, 0.676); color: white;" id="logOut-digital">
+              <span style="font-weight: bold; font-size:20px;">تسجيل الخروج</span>
+              <i class="fas fa-sign-out-alt fa-fw" style="font-weight: bold; font-size:20px; margin-left: 10px; color: white;"></i>
+            </a>
+
+          </li>
+          
+        </ul>
+      </div>
+      <!-- End Sidebar can copy it to anthor file -->
+
+    </div>
+  </body>
+<script type="module">
+
+document.querySelector("body > div > div.sidebar.bg-white.p-20.p-relative > ul > li > a:nth-child(3)").style.background="rgb(176 206 226 / 85%)"
+
+</script>
+
+</html>
