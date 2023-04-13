@@ -73,14 +73,14 @@
 <body>
     
     <!-- Stat nav -->
-    <div class="bg-white" style="position: fixed; z-index: 2; width: 100%; border-bottom: 1px solid rgba(128, 128, 128, 0.485);">
+    <div class="bg-white" style=" position: fixed; z-index: 2; width: 100%; border-bottom: 1px solid rgba(128, 128, 128, 0.485);">
         <div class="">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white font-weight-bold" style="font-family: sans-serif;">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark font-weight-bold" style="font-family: sans-serif;">
                 
 
 
               <div class="icons d-flex align-center">
-                <h1 class="CompanyName navbar-brand" style="margin: 10px;font-weight: bold; font-size: 20px; font-family: cairo,sans-serif; padding-right: 10px; display: flex; align-items: center;">  SCL  </h1>
+                <h1 class="CompanyName navbar-brand" style="margin: 5px;font-weight: bold; font-size: 30px; font-family: cairo,sans-serif; padding-right: 10px; display: flex; align-items: center;">  SCL  </h1>
               </div>
 
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,19 +90,28 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto" style="flex: auto; justify-content: start; justify-content: end;">
                         <li class="nav-item">
-                            <a class="nav-link" href="./Login/login.html">Login</a>
+                            <a class="nav-link" href="">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact"> Contact Us </a>
+                            <a class="nav-link" href="#who-are-we"> About </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">sections</a>
+                          <div class="dropdown show">
+                            <a class="nav-link dropdown-toggle" style="color: white;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               Department
+                            </a>
+                          
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <a class="dropdown-item" href="#">Books</a>
+                              <a class="dropdown-item" href="#">Sections</a>
+                            </div>
+                          </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#who-are-we"> Who Are We </a>
+                            <a class="nav-link" href="./Login/login.html"> Sign In </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" id="home-btn"> Dashboard </a>
+                            <a class="nav-link" href="#" id="home-btn"> Search </a>
                         </li>
                     </ul>
                 </div>
@@ -115,20 +124,29 @@
     <!-- End nav -->
 
     <div style="height: 60px;"></div>
-    <br><br>
+
     <!-- start slider -->
-    <div class="container" style="font-size: 20ox; width: 100%; background-image: url(./images/search\ bg.jpg); background-size: cover; background-repeat: no-repeat;     height: 40vh;
-    border-radius: 20px; padding: 20px; text-align: center; ">
+    <div style="
+    font-size: 20px;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/search\ bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;">
       
-          <h1 style="color: white; margin: 10% 0 0; text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);">محرك البحث عن الكتب</h1>
-          <br>
-          <div class="input-group mb-3" style="max-width: 80%; margin: auto;border: 3px solid white;border-radius: 100px;">
-            
-            <input style=" border-radius: 20px 0px 0px 20px;" type="text" class="form-control" placeholder="Enter Book Name ...?" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <div class="input-group-append" >
-              <span style="user-select: none; cursor: pointer; border-radius: 0px 20px 20px 0px; background: #57c7b2;color: white;" class="input-group-text" id="basic-addon2">Search</span>
-            </div>
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 90%;">
+        <h1 style="display: none; color: white; margin: 0 0 0; text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);">محرك البحث عن الكتب</h1>
+        <br>
+        <div class="input-group mb-3" style="max-width: 1000px; margin: auto;border: 3px solid white;border-radius: 100px;">
+          
+          <input style=" border-radius: 20px 0px 0px 20px;" type="text" class="form-control" placeholder="Enter Book Name ...?" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append" >
+            <span style="user-select: none; cursor: pointer; border-radius: 0px 20px 20px 0px; background: #313943;color: white;" class="input-group-text" id="basic-addon2">Search</span>
           </div>
+        </div>
+      </div>
+
     </div>
     
     <!-- end slider -->
